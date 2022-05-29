@@ -1,0 +1,104 @@
+.hero {
+  padding-top: 70px;
+  padding-bottom: 180px;
+  margin-bottom: 40px;
+
+  @include macbook {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  @include mobile-l {
+    margin-bottom: 0;
+  }
+
+  &__inner {
+    @include flex;
+
+    align-items: center;
+
+    @include mobile-s {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__inner-left {
+    margin-right: 47px;
+    width: 100%;
+    max-width: 540px;
+
+    @include mobile-m {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0.48px;
+    color: var(--color-light-green);
+    text-transform: uppercase;
+  }
+
+  &__subtitle span {
+    text-transform: lowercase;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: 0.48px;
+    color: var(--color-light-black);
+
+    @include macbook {
+      font-size: 52px;
+    }
+
+    @include mobile-l {
+      font-size: 48px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  &__inner-right {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    min-height: 510px;
+    height: 100%;
+
+    @include mobile-l {
+      min-height: 430px;
+    }
+
+    @include mobile-m {
+      display: none;
+    }
+  }
+
+  &__img-boy {
+    position: absolute;
+    top: 0;
+    right: 43%;
+    width: 100%;
+    max-width: 365px;
+  }
+
+  &__img-girl {
+    position: absolute;
+    top: 21%;
+    right: 0;
+    max-width: 495px;
+    width: 100%;
+  }
+}

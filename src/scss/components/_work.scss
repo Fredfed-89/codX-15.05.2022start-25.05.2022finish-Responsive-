@@ -1,0 +1,206 @@
+.work {
+  letter-spacing: 0.48px;
+  color: var(--color-light-black);
+
+  &__top-inner {
+    display: flex;
+    margin-bottom: 84px;
+
+    @include macbook {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+  }
+
+  &__top-img {
+    margin-right: 15px;
+
+    @include macbook {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__top-inner-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 48px;
+    padding-top: 62px;
+    width: 100%;
+    max-width: 600px;
+
+    @include mobile-l {
+      padding-left: 0;
+      padding-top: 30px;
+    }
+
+    @include mobile-m {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+  }
+
+  &__top-subtitle {
+    margin-bottom: 7px;
+    display: inline-block;
+    font-size: 35px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    @include mobile-m {
+      font-size: 28px;
+    }
+  }
+
+  &__top-title {
+    margin-bottom: 38px;
+    width: 100%;
+    max-width: 486px;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+
+    @include mobile-m {
+      margin-bottom: 24px;
+      white-space: normal;
+      font-size: 42px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 15px;
+      font-size: 32px;
+    }
+  }
+
+  &__top-text {
+    margin: 0;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.4;
+
+    @include mobile-m {
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    @include mobile-s {
+      font-size: 14px;
+    }
+  }
+
+  &__top-btn {
+    position: absolute;
+    display: inline-block;
+    margin-bottom: 60px;
+    padding: 12px 40px 16px;
+    width: 100%;
+    max-width: 166px;
+    right: 0;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.1;
+    text-align: center;
+    align-items: flex-end;
+    color: var(--color-white);
+    background-color: var(--color-light-black);
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+      padding: 12px 20px 14px;
+      color: var(--color-black);
+      border: 1px solid var(--color-black);
+      background-color: var(--color-white);
+    }
+
+    @include macbook {
+      position: relative;
+    }
+
+    @include mobile-m {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 140px;
+
+    @include macbook {
+      flex-wrap: wrap-reverse;
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom-inner-left {
+    padding: 64px;
+    width: 100%;
+    max-width: 585px;
+
+    @include mobile-l {
+      padding: 20px 0;
+    }
+  }
+
+  &__bottom-item {
+    width: 100%;
+    max-width: 431px;
+  }
+
+  &__bottom-number {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 6px 20px 11px;
+    border-radius: 30px;
+
+    &--one {
+      background-color: var(--color-light-green);
+    }
+
+    &--two {
+      background-color: var(--color-pink);
+    }
+
+    &--three {
+      background-color: var(--color-yellow);
+    }
+  }
+
+  &__bottom-subtitle {
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1;
+
+    @include mobile-m {
+      font-size: 28px;
+    }
+  }
+
+  &__bottom-text {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+
+    @include mobile-m {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__bottom-img {
+    @include macbook {
+      width: 100%;
+    }
+  }
+
+  &__bottom-bg {
+    width: 100%;
+  }
+}

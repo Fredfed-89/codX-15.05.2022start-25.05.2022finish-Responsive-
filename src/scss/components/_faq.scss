@@ -1,0 +1,148 @@
+.faq {
+  padding-top: 55px;
+  margin-bottom: 100px;
+  letter-spacing: 0.48px;
+  color: var(--color-light-black);
+
+  @include mobile-m {
+    padding-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  @include mobile-s {
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1072px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include mobile-m {
+      font-size: 44px;
+    }
+  }
+
+  &__list-item {
+    @include flex-sb;
+
+    position: relative;
+    margin-bottom: 25px;
+    padding: 23px 26px 29px;
+    width: 100%;
+    max-width: 1072px;
+    transition: all 0.6s ease-in-out;
+
+
+    summary::marker {
+      content: '';
+    }
+
+    details summary:before {
+      content: url('../img/faq-arrow.svg');
+      cursor: pointer;
+      transition: all 0.6s ease-in-out;
+    }
+
+    details[open] summary:before {
+      content: url('../img/faq-arrow.svg');
+      transform: rotate(90deg);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      animation: normal 0.3s;
+    }
+
+    details[open] summary &__item-descr {
+      animation: 0.3s ease-in-out;
+      animation: normal 0.3s;
+    }
+
+    @include mobile-m {
+      margin-bottom: 0;
+      padding: 15px 0;
+    }
+
+    @include mobile-s {
+      padding: 10px 5px;
+    }
+  }
+
+  &__list-item-position::before {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    transition: all 0.6s ease-in-out;
+
+    @include mobile-s {
+      top: 15px;
+    }
+
+    @include mobile-xs {
+      right: 10px;
+    }
+  }
+
+  &__item-text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.1;
+
+    @include macbook {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    @include mobile-l {
+      width: 100%;
+      max-width: 250px;
+    }
+
+    @include mobile-m {
+      font-size: 16px;
+    }
+
+    @include mobile-xs {
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+
+  &__item-descr {
+    margin: 0;
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.1;
+
+    @include mobile-m {
+      padding: 8px 0;
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    padding: 5px 9px;
+    outline: transparent;
+    border: transparent;
+    background-color: var(--color-white);
+    cursor: pointer;
+  }
+
+  &__btn-arrow {
+    display: inline-block;
+    width: 28px;
+    height: 17px;
+    background-image: url("../img/faq-arrow.svg");
+  }
+}

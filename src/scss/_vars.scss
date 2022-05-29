@@ -1,0 +1,20 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Outfit", sans-serif;
+  --content-width: 1200px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --color-light-black: #2f2f2f;
+  --color-light-green: #82cbac;
+  --color-black: #222;
+  --color-white: #fff;
+  --color-pink: #ff7f96;
+  --color-yellow: #ead71b;
+  --color-input: #f6f6f6;
+  --color-blue: #2262de;
+  --color-light-blue: #28abf4;
+}

@@ -1,0 +1,209 @@
+.hey {
+  padding-bottom: 96px;
+  letter-spacing: 0.48px;
+  color: var(--color-light-black);
+
+  @include macbook {
+    padding-bottom: 30px;
+  }
+
+  @include mobile-l {
+    padding-bottom: 0;
+  }
+
+  &__top-img {
+    margin-bottom: 128px;
+    width: 100%;
+
+    @include macbook {
+      margin-bottom: 50px;
+    }
+
+    @include mobile-l {
+      margin-bottom: 30px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner-top {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 625px;
+  }
+
+  &__top-title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1;
+
+    @include mobile-l {
+      font-size: 56px;
+    }
+
+    @include mobile-s {
+      font-size: 38px;
+    }
+  }
+
+  &__top-text {
+    margin: 0;
+    margin-bottom: 72px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+
+    @include mobile-l {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__inner-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn-inner {
+    width: 100%;
+    max-width: 552px;
+
+    @include macbook {
+      max-width: none;
+    }
+
+    @include mobile-l {
+      max-height: 52px;
+      height: 100%;
+    }
+  }
+
+  &__btn-artist {
+    border: 1px solid var(--color-light-black);
+    border-radius: 30px;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    color: var(--color-light-black);
+    background-color: var(--color-white);
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+
+    &--jack,
+    &--suni,
+    &--colin {
+      padding: 13px 112px 35px 65px;
+      opacity: 1;
+
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-light-black);
+      }
+
+      @include mobile-m {
+        padding: 13px 78px 35px 29px;
+      }
+
+      @include mobile-s {
+        padding: 7px 72px 31px 23px;
+      }
+
+      @include mobile-xs {
+        padding: 7px 65px 31px 14px;
+      }
+    }
+  }
+
+  &__artist-item {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1104px;
+    transform: translateY(45px);
+
+    @include macbook {
+      transform: translateY(55px);
+    }
+
+    @include mobile-l {
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(75px);
+    }
+
+    @include mobile-m {
+      align-items: center;
+      transform: translateY(50px);
+    }
+
+    @include mobile-s {
+      width: 100%;
+      max-width: 350px;
+      transform: translateY(30px);
+    }
+  }
+
+  &__jack-image {
+    @include macbook {
+      max-width: 400px;
+      transform: translateY(-40px);
+    }
+
+    @include mobile-l {
+      transform: translateY(-30px);
+      max-width: 350px;
+    }
+
+    @include mobile-m {
+      transform: translateY(-3px);
+      max-width: 315px;
+    }
+  }
+
+  &__jack-subtitle {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.1;
+    color: var(--color-pink);
+  }
+
+  &__jack-title {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 35px;
+    line-height: 1;
+
+    @include mobile-l {
+      margin-bottom: 8px;
+      font-size: 30px;
+    }
+
+    @include mobile-s {
+      font-size: 24px;
+    }
+
+    @include mobile-xs {
+      font-size: 22px;
+    }
+  }
+
+  &__jack-text {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.3;
+
+    @include mobile-l {
+      font-size: 14px;
+    }
+
+    @include mobile-m {
+      line-height: 1;
+    }
+  }
+}
