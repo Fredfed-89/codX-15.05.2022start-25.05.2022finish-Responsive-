@@ -8,6 +8,11 @@ html {
   box-sizing: inherit;
 }
 
+body [data-aos-duration='5000'] [data-aos],
+[data-aos][data-aos][data-aos-duration='5000'] {
+  transition-duration: 5000ms;
+}
+
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
