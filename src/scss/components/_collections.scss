@@ -23,6 +23,10 @@
     @include mobile-l {
       font-size: 42px;
     }
+
+    @include mobile-m {
+      font-size: 38px;
+    }
   }
 
   &__inner-articles {
@@ -40,9 +44,9 @@
   &__list {
     @include flex-sb;
 
-    @include mobile-l {
+    @include mobile-m {
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-evenly;
     }
   }
 
@@ -50,16 +54,22 @@
     width: 100%;
     max-width: 358px;
 
-    @include macbook {
+    @include for-desktop {
       &:not(:last-child) {
         margin-right: 10px;
       }
     }
 
-    @include mobile-s {
+    @include mobile-m {
+      max-width: 160px;
+
       &:not(:last-child) {
         margin-right: 0;
       }
+    }
+
+    @include mobile-s {
+      max-width: none;
     }
   }
 
@@ -80,6 +90,22 @@
     font-size: 26px;
     line-height: 1;
     color: var(--color-light-black);
+
+    @include macbook {
+      padding-left: 0;
+    }
+
+    @include mobile-l {
+      text-align: center;
+    }
+
+    @include mobile-m {
+      margin-bottom: 20px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 15px;
+    }
   }
 
   &__btn {

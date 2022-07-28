@@ -1,34 +1,48 @@
 .header {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 
   &__nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     border-radius: 30px;
     margin-top: 17px;
     padding: 14px 28px;
+    max-width: 1200px;
+    width: 100%;
     align-items: center;
     background-color: var(--color-white);
     box-shadow: 0px -4px 19px rgba(0, 0, 0, 0.03);
+    z-index: 110;
 
-    @include mobile-m {
-      flex-direction: column;
-    }
-
-    @include mobile-s {
+    @include macbook {
+      top: 0;
+      right: 0;
+      left: 0;
+      padding: 0;
       margin-top: 0;
+      border-radius: 0;
     }
   }
 
-  &__list-left {
+  &__list {
     @include flex-start-center;
+    z-index: 100;
 
     @include macbook {
+      position: absolute;
+      padding-top: 50px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
       white-space: nowrap;
-    }
-
-    @include mobile-l {
-      white-space: nowrap;
+      background: linear-gradient(270deg, #FFE000 -7.63%, #FFBD00 89.71%, #FFA500 177.06%, #FF9C00 230.55%);
+      transition: 0.3s;
+      transform: translateY(-100%);
     }
 
     @include mobile-m {
@@ -40,13 +54,21 @@
     &:not(:last-child) {
       margin-right: 48px;
 
-      @include mobile-l {
-        margin-right: 25px;
+      @include macbook {
+        margin-right: 0;
       }
+    }
 
-      @include mobile-xs {
-        margin-right: 15px;
+    &:nth-child(3) {
+      margin-right: 125px;
+
+      @include macbook {
+        margin-right: 0;
       }
+    }
+
+    @include macbook {
+      padding: 10px;
     }
 
     &--big {
@@ -63,51 +85,34 @@
     line-height: 1.1;
     letter-spacing: 0.48px;
     color: var(--color-black);
-    transition: color 0.5s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
       color: var(--color-light-green);
     }
-  }
 
-  &__inner-right {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  &__list-right {
-    @include flex-end;
-
-    @include mobile-m {
-      justify-content: center;
+    @include macbook {
+      font-size: 32px;
     }
   }
 
-  &__item-right {
-    position: relative;
+  &__item-icon-inner {
+    display: flex;
 
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    &--btn {
-      margin-left: 48px;
-      transform: translateY(-3px);
-
-      @include mobile-m {
-        margin-left: 20px;
-      }
-
-      @include mobile-xs {
-        margin-left: 10px;
-      }
+    @include macbook {
+      margin-bottom: 15px;
     }
   }
 
   &__item-icon svg {
     width: 18px;
     height: 18px;
-    transition: fill 0.5s ease-in-out;
+    transition: fill 0.3s ease-in-out;
+
+    @include macbook {
+      width: 26px;
+      height: 26px;
+    }
   }
 
   &__item-icon {
@@ -137,6 +142,7 @@
     line-height: 1.1;
     text-align: center;
     letter-spacing: 0.48px;
+    white-space: nowrap;
     color: var(--color-white);
     background-color: var(--color-light-black);
     transition: background-color 0.5s ease-in-out;
@@ -149,7 +155,6 @@
     }
 
     @include mobile-xs {
-      white-space: nowrap;
       padding: 10px 13px 13px;
     }
   }
@@ -158,9 +163,31 @@
 .logo img {
   @include macbook {
     max-width: none;
+    margin-left: 15px;
   }
 
   @include mobile-l {
     max-width: none;
   }
+}
+
+.hamburger {
+  display: none;
+  z-index: 100;
+
+  @include macbook {
+    display: block;
+  }
+}
+
+.hamburger-label {
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+.is-active {
+  transform: translateY(0%);
 }

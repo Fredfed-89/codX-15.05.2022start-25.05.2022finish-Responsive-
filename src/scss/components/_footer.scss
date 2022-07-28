@@ -18,6 +18,7 @@
     max-width: 1072px;
 
     @include macbook {
+      justify-content: space-around;
       flex-wrap: wrap;
       margin-bottom: 50px;
     }
@@ -30,6 +31,10 @@
   &__community {
     width: 100%;
     max-width: 202px;
+
+    @include macbook {
+      margin-bottom: 50px;
+    }
 
     @include mobile-l {
       margin-bottom: 50px;
@@ -61,10 +66,14 @@
   &__community-icon svg {
     width: 18px;
     height: 18px;
-    transition: fill 0.5s ease-in-out;
+    transition: fill 0.3s ease-in-out;
   }
 
   &__list {
+    @include macbook {
+      margin-right: 10px;
+    }
+
     @include mobile-m {
       margin-bottom: 30px;
     }
@@ -149,9 +158,9 @@
     font-size: 14px;
     line-height: 1.1;
     color: var(--color-white);
-    background: var(--color-light-black);
+    background-color: var(--color-light-black);
     transform: translateY(-2px);
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
       padding: 12px 16px 13px 15px;
@@ -193,7 +202,7 @@
     font-size: 14px;
     line-height: 1.1;
     color: var(--color-pink);
-    transition: color 0.7s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
       color: var(--color-light-green);
@@ -209,7 +218,7 @@
     font-size: 15px;
     line-height: 1.1;
     color: var(--color-pink);
-    transition: color 0.7s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
       color: var(--color-light-green);

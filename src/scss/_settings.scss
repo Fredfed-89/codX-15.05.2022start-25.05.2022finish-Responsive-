@@ -16,7 +16,6 @@ html {
 
 .page__body {
   margin: 0;
-  font-family: 'Outfit'sans-serif;
   font-style: normal;
   min-width: 320px;
   min-height: 100%;
@@ -29,9 +28,7 @@ html {
 }
 
 img {
-  // height: auto;
   max-width: 100%;
-  // object-fit: cover;
 }
 
 a {
@@ -88,8 +85,8 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  padding: 0 15px;
+  max-width: 1200px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

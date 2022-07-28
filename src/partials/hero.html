@@ -1,7 +1,5 @@
 <section class="hero">
   <div class="container">
-
-
     <div class="hero__inner">
       <div class="hero__inner-left">
         <span class="hero__subtitle">
@@ -14,14 +12,20 @@
           Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et magna at
         </p>
       </div>
-
       <div class="hero__inner-right">
-        <img class="hero__img-boy" src="img/hero-boy.png" width="365" alt="nft image project author lee stone">
-        <img class="hero__img-girl" src="img/hero-girl.png" width="495"
-          alt="nft image digital creator project mia potter">
+        <picture>
+          <source srcset="img/hero-boy.avif" type="image/avif">
+          <source srcset="img/hero-boy.webp" type="image/webp">
+          <img class="hero__img-boy" src="img/hero-boy.png" width="365" loading="lazy"
+            alt="nft image project author lee stone">
+        </picture>
+        <picture>
+          <source srcset="img/hero-girl.avif" type="image/avif">
+          <source srcset="img/hero-girl.webp" type="image/webp">
+          <img class="hero__img-girl" src="img/hero-girl.png" width="495" loading="lazy"
+            alt="nft image digital creator project mia potter">
+        </picture>
       </div>
     </div>
-
-
   </div>
 </section>

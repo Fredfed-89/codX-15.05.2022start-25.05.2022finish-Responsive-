@@ -1,8 +1,10 @@
 <section class="hey">
-  <img class="hey__top-img" src="img/hey-top-img.png" width="1440" alt="random images nfts">
+  <picture>
+    <source srcset="img/hey-top-img.avif" type="image/avif">
+    <source srcset="img/hey-top-img.webp" type="image/webp">
+    <img class="hey__top-img" src="img/hey-top-img.png" width="1440" loading="lazy" alt="random images nfts">
+  </picture>
   <div class="container">
-
-
     <div class="hey__inner-top">
       <h2 class="hey__top-title">
         Hey there, we are
@@ -11,22 +13,17 @@
         Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et magna at
       </p>
     </div>
-
-
-
     <div class="hey__inner-bottom swiper">
-
       <div class="swiper-pagination hey__btn-inner">
         <span class="hey__btn-artist hey__btn-artist--jack swiper-pagination-bullet">Jack</span>
         <span class="hey__btn-artist hey__btn-artist--suni swiper-pagination-bullet">Suni</span>
         <span class="hey__btn-artist hey__btn-artist--colin swiper-pagination-bullet">Colin</span>
       </div>
-
       <div class="swiper-wrapper">
-
         <div class="swiper-slide">
           <div class="hey__artist-item">
-            <img class="hey__jack-image" src="img/hey-jack-img.png" width="552" alt="nft artist jack image">
+            <img class="hey__jack-image" src="img/hey-jack-img.png" width="552" loading="lazy"
+              alt="nft artist jack image">
             <div class="hey__jack-info">
               <span class="hey__jack-subtitle">Digital Artist</span>
               <h3 class="hey__jack-title">
@@ -45,10 +42,10 @@
             </div>
           </div>
         </div>
-
         <div class="swiper-slide">
           <div class="hey__artist-item">
-            <img class="hey__jack-image" src="img/hey-jack-img.png" width="552" alt="nft artist suni image">
+            <img class="hey__jack-image" src="img/hey-jack-img.png" width="552" loading="lazy"
+              alt="nft artist jack image">
             <div class="hey__jack-info">
               <span class="hey__jack-subtitle">Digital Artist</span>
               <h3 class="hey__jack-title">
@@ -67,10 +64,10 @@
             </div>
           </div>
         </div>
-
         <div class="swiper-slide">
           <div class="hey__artist-item">
-            <img class="hey__jack-image" src="img/hey-jack-img.png" width="552" alt="nft artist colin image">
+            <img class="hey__jack-image" src="img/hey-jack-img.png" width="552" loading="lazy"
+              alt="nft artist jack image">
             <div class="hey__jack-info">
               <span class="hey__jack-subtitle">Digital Artist</span>
               <h3 class="hey__jack-title">
@@ -89,10 +86,7 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
-
   </div>
 </section>

@@ -6,15 +6,24 @@
     display: flex;
     margin-bottom: 84px;
 
+    picture {
+      @include for-desktop {
+        margin-right: 15px;
+      }
+
+      @include macbook {
+        margin-right: 0;
+      }
+    }
+
     @include macbook {
+      justify-content: center;
       flex-wrap: wrap;
       margin-bottom: 0;
     }
   }
 
   &__top-img {
-    margin-right: 15px;
-
     @include macbook {
       margin-right: 0;
       width: 100%;
@@ -30,9 +39,14 @@
     width: 100%;
     max-width: 600px;
 
-    @include mobile-l {
+    @include for-desktop {
       padding-left: 0;
+      padding-top: 0;
+    }
+
+    @include macbook {
       padding-top: 30px;
+      max-width: none;
     }
 
     @include mobile-m {
@@ -62,8 +76,11 @@
     font-size: 48px;
     line-height: 1;
 
-    @include mobile-m {
+    @include macbook {
       margin-bottom: 24px;
+    }
+
+    @include mobile-m {
       white-space: normal;
       font-size: 42px;
     }
@@ -115,8 +132,13 @@
       background-color: var(--color-white);
     }
 
-    @include macbook {
+    @include for-desktop {
       position: relative;
+      margin-bottom: 0;
+    }
+
+    @include macbook {
+      margin-bottom: 30px;
     }
 
     @include mobile-m {
@@ -127,27 +149,29 @@
   &__bottom-inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 140px;
+    margin-bottom: 100px;
 
     @include macbook {
+      margin-bottom: 40px;
       flex-wrap: wrap-reverse;
+      justify-content: center;
       margin-bottom: 0;
     }
   }
 
   &__bottom-inner-left {
-    padding: 64px;
+    padding: 10px;
     width: 100%;
     max-width: 585px;
 
-    @include mobile-l {
-      padding: 20px 0;
+    @include for-desktop {
+      padding: 10px 32px;
     }
-  }
 
-  &__bottom-item {
-    width: 100%;
-    max-width: 431px;
+    @include macbook {
+      padding: 10px 0;
+      max-width: none;
+    }
   }
 
   &__bottom-number {

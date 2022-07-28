@@ -1,7 +1,5 @@
 <section class="collections">
   <div class="container">
-
-
     <div class="collections__inner">
       <h2 class="collections__title">
         Browse by Collections
@@ -10,8 +8,12 @@
         <ul class="collections__list list-reset">
           <li class="collections__item">
             <a class="collections__article" href="#">
-              <img class="collections__article-image" src="img/collections-collectibles.png" width="358"
-                alt="collections collectibles item image">
+              <picture>
+                <source srcset="img/collections-collectibles.avif" type="image/avif">
+                <source srcset="img/collections-collectibles.webp" type="image/webp">
+                <img class="collections__article-image" src="img/collections-collectibles.png" width="358"
+                  loading="lazy" alt="collections collectibles item image">
+              </picture>
               <h3 class="collections__article-subtitle">
                 Collectibles
               </h3>
@@ -19,8 +21,12 @@
           </li>
           <li class="collections__item">
             <a class="collections__item-link" href="#">
-              <img class="collections__article-image" src="img/collections-art.png" width="358"
-                alt="collections art item image">
+              <picture>
+                <source srcset="img/collections-art.avif" type="image/avif">
+                <source srcset="img/collections-art.webp" type="image/webp">
+                <img class="collections__article-image" src="img/collections-art.png" width="358" loading="lazy"
+                  alt="collections art item image">
+              </picture>
               <h3 class="collections__article-subtitle">
                 Art
               </h3>
@@ -28,8 +34,12 @@
           </li>
           <li class="collections__item">
             <a class="collections__item-link" href="#">
-              <img class="collections__article-image" src="img/collections-photography.png" width="358"
-                alt="collections photography item image">
+              <picture>
+                <source srcset="img/collections-photography.avif" type="image/avif">
+                <source srcset="img/collections-photography.webp" type="image/webp">
+                <img class="collections__article-image" src="img/collections-photography.png" width="358" loading="lazy"
+                  alt="collections photography item image">
+              </picture>
               <h3 class="collections__article-subtitle">
                 Photography
               </h3>
@@ -41,7 +51,5 @@
         <a class="collections__btn-link" href="#">View all</a>
       </div>
     </div>
-
-
   </div>
 </section>

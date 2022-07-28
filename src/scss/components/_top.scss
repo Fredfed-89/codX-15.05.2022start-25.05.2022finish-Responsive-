@@ -25,8 +25,12 @@
       text-transform: uppercase;
     }
 
-    @include mobile-s {
-      font-size: 48px;
+    @include mobile-l {
+      font-size: 42px;
+    }
+
+    @include mobile-m {
+      font-size: 38px;
     }
   }
 
@@ -47,16 +51,22 @@
       gap: 10px;
     }
 
-    @include mobile-l {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    @include mobile-m {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-xs {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
   &__item {
     width: 100%;
     max-width: 332px;
+
+    @include mobile-l {
+      max-width: 300px;
+    }
   }
 
   &__info-inner {
@@ -67,6 +77,10 @@
 
     @include macbook {
       padding: 10px;
+    }
+
+    @include mobile-l {
+      justify-content: center;
     }
   }
 
@@ -79,6 +93,10 @@
 
     @include macbook {
       font-size: 14px;
+    }
+
+    @include mobile-l {
+      margin-right: 0;
     }
   }
 
@@ -103,6 +121,10 @@
     @include macbook {
       width: 28px;
       height: 28px;
+    }
+
+    @include mobile-l {
+      display: none;
     }
   }
 

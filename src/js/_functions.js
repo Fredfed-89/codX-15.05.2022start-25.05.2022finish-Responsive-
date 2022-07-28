@@ -2,7 +2,9 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-import { mobileCheck } from "./functions/mobile-check";
+import {
+  mobileCheck
+} from "./functions/mobile-check";
 console.log(mobileCheck())
 
 // Определение ширины экрана
@@ -50,10 +52,24 @@ console.log(mobileCheck())
 // });
 
 // Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
+// import Swiper from 'swiper/bundle';
+
+// const mySwiper = new Swiper('.swiper', {
+//   // modules: [Navigation, Pagination],
+//   slidesPerView: 1,
+//   // spaceBetween: 30,
+//   // loop: true,
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//     type: 'custom',
+//     clickable: true,
+//   },
 // });
 
 // Подключение анимаций по скроллу

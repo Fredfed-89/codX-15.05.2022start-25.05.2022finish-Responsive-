@@ -1,15 +1,10 @@
 <header class="header">
   <div class="container">
-
-
     <nav class="header__nav">
-
-      <ul class="header__list-left list-reset">
-        <li class="header__item">
-          <a class="header__item-link logo" href="#">
-            <img src="img/logo.svg" width="94" alt="site logo">
-          </a>
-        </li>
+      <a class="header__item-link logo" href="#">
+        <img src="img/logo.svg" width="94" loading="lazy" alt="site logo">
+      </a>
+      <ul class="header__list list-reset">
         <li class="header__item">
           <a class="header__item-link" href="#">
             About us
@@ -25,39 +20,38 @@
             Contact
           </a>
         </li>
-      </ul>
-
-      <div class="header__inner-right">
-        <ul class="header__list-right list-reset">
-          <li class="header__item-right">
-            <a class="header__item-icon" href="#">
+        <div class="header__item-icon-inner">
+          <li class="header__item">
+            <a class="header__item-icon" href="#" aria-label="link icon to twitter">
               <svg class="header__item-icon--twitter">
                 <use xlink:href="img/sprite.svg#header-icon-twitter"></use>
               </svg>
             </a>
           </li>
-          <li class="header__item-right">
-            <a class="header__item-icon" href="#">
+          <li class="header__item">
+            <a class="header__item-icon" href="#" aria-label="link icon to instagram">
               <svg class="header__item-icon--instagram">
                 <use xlink:href="img/sprite.svg#header-icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="header__item-right">
-            <a class="header__item-icon" href="#">
+          <li class="header__item header__item--right">
+            <a class="header__item-icon" href="#" aria-label="link icon to facebook">
               <svg class="header__item-icon--facebook">
                 <use xlink:href="img/sprite.svg#header-icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="header__item-right header__item-right--btn">
-            <a class="header__item-btn" href="#">View on OpenSea</a>
-          </li>
-        </ul>
-      </div>
-
+        </div>
+        <a class="header__item-btn header__item--btn" href="#">View on OpenSea</a>
+      </ul>
+      <button class="hamburger hamburger--elastic" type="button" aria-label="menu button navigation"
+        aria-controls="navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        <span class="hamburger-label">menu</span>
+      </button>
     </nav>
-
-
   </div>
 </header>

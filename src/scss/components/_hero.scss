@@ -18,8 +18,9 @@
 
     align-items: center;
 
-    @include mobile-s {
+    @include mobile-l {
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -28,9 +29,13 @@
     width: 100%;
     max-width: 540px;
 
+    @include mobile-l {
+      margin-right: 0;
+    }
+
     @include mobile-m {
       margin-right: 0;
-      margin-bottom: 40px;
+      margin-bottom: 0;
     }
   }
 
@@ -62,12 +67,26 @@
     @include mobile-l {
       font-size: 48px;
     }
+
+    @include mobile-m {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
     margin: 0;
     width: 100%;
     max-width: 420px;
+
+    @include mobile-l {
+      margin-bottom: 20px;
+    }
+
+    @include mobile-m {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
   }
 
   &__inner-right {
@@ -80,10 +99,6 @@
     @include mobile-l {
       min-height: 430px;
     }
-
-    @include mobile-m {
-      display: none;
-    }
   }
 
   &__img-boy {
@@ -92,6 +107,10 @@
     right: 43%;
     width: 100%;
     max-width: 365px;
+
+    @include mobile-m {
+      right: auto;
+    }
   }
 
   &__img-girl {
@@ -100,5 +119,13 @@
     right: 0;
     max-width: 495px;
     width: 100%;
+
+    @include mobile-l {
+      max-width: 400px;
+    }
+
+    @include mobile-s {
+      top: 30%;
+    }
   }
 }
