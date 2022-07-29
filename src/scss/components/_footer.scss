@@ -123,6 +123,10 @@
     margin-bottom: 16px;
   }
 
+  &__form-label {
+    position: relative;
+  }
+
   &__input {
     border-radius: 20px;
     border: transparent;
@@ -152,11 +156,13 @@
   }
 
   &__input-btn {
+    position: absolute;
     padding: 11px 14px 13px 15px;
     border-radius: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.1;
+    white-space: nowrap;
     color: var(--color-white);
     background-color: var(--color-light-black);
     transform: translateY(-2px);
