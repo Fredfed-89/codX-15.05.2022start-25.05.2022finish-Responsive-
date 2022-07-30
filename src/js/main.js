@@ -5,3 +5,4 @@ import './_functions';
 import './components/main-slider';
 import './components/hamburger';
 import './components/animation';
+import './components/smooth';
